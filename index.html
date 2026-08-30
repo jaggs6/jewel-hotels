@@ -3,152 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewel Hotels - Luxury Stay</title>
+    <title>Hotel Jewel Palace | Luxury Stay in Mumbai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        :root {
+            --gold: #d4af37;
+            --dark-blue: #0a192f;
+            --light-gray: #f8f9fa;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Playfair Display', serif;
             color: #333;
-            line-height: 1.6;
         }
-        header {
-            background: #2c3e50;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
+        .navbar {
+            background-color: var(--dark-blue) !important;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #34495e;
-            padding: 0.5rem;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
+        .navbar-brand, .nav-link {
+            color: white !important;
         }
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1566073771255-78956810a930?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1542314831-068elasticsearch-hotel-luxury?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
-            height: 60vh;
+            height: 80vh;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            color: white;
+            justify-content: center;
             text-align: center;
+            color: white;
         }
         .hero h1 {
-            font-size: 3rem;
+            font-size: 4rem;
+            font-weight: bold;
             margin-bottom: 1rem;
         }
-        .booking-container {
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .booking-bar {
             background: white;
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            margin: -50px auto 50px;
-            width: 80%;
-            max-width: 1000px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
         }
-        .input-group {
-            display: flex;
-            flex-direction: column;
-        }
-        .input-group label {
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .input-group input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .btn-book {
-            background: #e67e22;
+        .btn-gold {
+            background-color: var(--gold);
             color: white;
             border: none;
-            padding: 10px 30px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            align-self: flex-end;
+            padding: 12px 30px;
+            font-weight: bold;
+            transition: 0.3s;
         }
-        .btn-book:hover {
-            background: #d35400;
-        }
-        .features {
-            display: flex;
-            justify-content: space-around;
-            padding: 50px 10%;
-            background: #f9f9f9;
-        }
-        .feature-item {
-            text-align: center;
-            max-width: 300px;
-        }
-        footer {
-            background: #2c3e50;
+        .btn-gold:hover {
+            background-color: #b8962e;
             color: white;
+        }
+        .section-title {
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 50px;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--gold);
+            margin: 10px auto;
+        }
+        .feature-card {
+            border: none;
+            transition: 0.3s;
+            text-align: center;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .footer {
+            background-color: var(--dark-blue);
+            color: white;
+            padding: 3rem 0;
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>JEWEL HOTELS</h1>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Rooms</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">HOTEL JEWEL PALACE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Rooms & Suites</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dining</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Banquets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <div class="hero">
-        <h1>Experience Pure Luxury</h1>
-        <p>Your sanctuary of peace and elegance</p>
-    </div>
-    <div class="booking-container">
-        <div class="input-group">
-            <label>Check-in</label>
-            <input type="date">
+
+    <header class="hero">
+        <div class="container">
+            <h1>Experience Pure Elegance</h1>
+            <p>The pinnacle of luxury hospitality in the heart of Mumbai</p>
+            <a href="#book" class="btn btn-gold btn-lg">Book Your Stay</a>
         </div>
-        <div class="input-group">
-            <label>Check-out</label>
-            <input type="date">
-        </div>
-        <div class="input-group">
-            <label>Guests</label>
-            <input type="number" min="1" value="1">
-        </div>
-        <button class="btn-book">Check Availability</button>
-    </div>
-    <div class="features">
-        <div class="feature-item">
-            <h3>World-Class Spa</h3>
-            <p>Unwind in our state-of-the-art wellness center.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Fine Dining</h3>
-            <p>Experience Michelin-star cuisine in the heart of the city.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Ocean Views</h3>
-            <p>Every room offers a breathtaking view of the coast.</p>
+    </header>
+
+    <div class="container">
+        <div id="book" class="booking-bar">
+            <form class="row g-3 align-items-end">
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Check-in</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Check-out</label>
+                    <input type="date" class="form-control">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold">Guests</label>
+                    <input type="number" class="form-control" min="1" value="1">
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-gold w-100">Check Availability</button>
+                </div>
+            </form>
         </div>
     </div>
-    <footer>
-        <p>&copy; 2026 Jewel Hotels. All rights reserved.</p>
+
+    <section class="container py-5 my-5">
+        <h2 class="section-title">Our World-Class Amenities</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4">
+                    <div class="card-body">
+                        <h3 class="h5 card-title fw-bold">Imperial Suites</h3>
+                        <p class="card-text text-muted">Exquisite rooms designed for the ultimate comfort and privacy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4">
+                    <div class="card-body">
+                        <h3 class="h5 card-title fw-bold">Gourmet Dining</h3>
+                        <p class="card-text text-muted">Savor Michelin-starred cuisine from across the globe.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card h-100 p-4">
+                    <div class="card-body">
+                        <h3 class="h5 card-title fw-bold">Royal Banquets</h3>
+                        <p class="card-text text-muted">Host your most prestigious events in our grand ballroom.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <h3 class="mb-4">Hotel Jewel Palace</h3>
+            <p class="text-muted">&copy; 2026 Hotel Jewel Palace Mumbai. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
